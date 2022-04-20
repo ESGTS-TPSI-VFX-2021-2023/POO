@@ -61,6 +61,60 @@ public class Desenho {
 		return pontoMaisEsquerda;
 		
 	}
+	
+	public Ponto MaisDireita() {
+		
+		Ponto pontoMaisDireita = this.Pontos.get(0);
+		
+		for (Ponto ponto : this.Pontos) {
+			if (ponto.getX() > pontoMaisDireita.getX()) {
+				pontoMaisDireita = ponto;
+			}
+		}
+		
+		return pontoMaisDireita;
+		
+	}
+	
+	public boolean PontoExiste(int x, int y) {
+		
+		for (Ponto ponto : Pontos) {
+			if (ponto.getX() == x && ponto.getY() == y) {
+				return true;
+			}
+		}
+		
+		return false;
+		
+	}
+	
+	public ArrayList<Ponto> PontosQuadrante(int quadrante){
+		
+		ArrayList<Ponto> pontos = new ArrayList<Ponto>();
+		
+		for (Ponto ponto : pontos) {
+			
+			if (ponto.getX() >= 0 && ponto.getY() >= 0 && quadrante == 1) {
+				pontos.add(ponto);
+			}
+			
+			if (ponto.getX() < 0 && ponto.getY() >= 0 && quadrante == 2) {
+				pontos.add(ponto);
+			}
+			
+			if (ponto.getX() < 0 && ponto.getY() < 0 && quadrante == 3) {
+				pontos.add(ponto);
+			}
+			
+			if (ponto.getX() < 0 && ponto.getY() >= 0 && quadrante == 4) {
+				pontos.add(ponto);
+			}
+			
+		}
+		
+		return pontos;
+		
+	}
 
     // =======================================================
     // ============== MÉTODOS COMPLEMENTARES ==============

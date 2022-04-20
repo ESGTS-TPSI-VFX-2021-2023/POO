@@ -19,6 +19,7 @@ public class main {
 		d1.AdicionarPonto(p3);
 		
 		System.out.println(d1.MaisEsquerda());
+		System.out.println(d1.MaisDireita());
 
 	}
 
