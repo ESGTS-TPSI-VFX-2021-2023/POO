@@ -46,11 +46,10 @@ public class Jogada {
    
 
     // CONSTRUTOR COM PARÂMETROS
-	public Jogada(int coluna, int linha, Jogador jogador) {
+	public Jogada(int coluna, int linha) {
 		super();
 		this.coluna = coluna;
 		this.linha = linha;
-		this.jogador = jogador;
 	}
 
 

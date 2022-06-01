@@ -46,18 +46,29 @@ public class main {
 		String nomeJogador2 = sc.next();
 		System.out.println("Qual o carater do jogador 2?");
 		char caraterJogador2 = sc.next().charAt(0);
+		
+		System.out.println("Qual o numero de colunas?");
+		int nrColunas = sc.nextInt();
+		
+		System.out.println("Qual o numero de linhas?");
+		int nrLinhas = sc.nextInt();
+		
 		Jogador jogador2 = new Jogador(nomeJogador2, caraterJogador2);
 		
-		Tabuleiro tabuleiro1 = new Tabuleiro(jogador1, jogador2);
+		Tabuleiro tabuleiro1 = new Tabuleiro(jogador1, jogador2, nrColunas, nrLinhas);
 		
-		System.out.println("Qual a coluna?");
-		int coluna = sc.nextInt();
-		
-		System.out.println("Qual a linha?");
-		int linha = sc.nextInt();
-		
-		Jogada jogada = new Jogada(coluna, linha, jogador1);
-		tabuleiro1.AdicionarJogada(jogada);
+		while (tabuleiro1.getEstado() == 0) {
+			System.out.println("Qual a coluna?");
+			int coluna = sc.nextInt();
+			
+			System.out.println("Qual a linha?");
+			int linha = sc.nextInt();
+			
+			Jogada jogada = new Jogada(coluna, linha);
+			tabuleiro1.AdicionarJogada(jogada);
+			
+			System.out.println(tabuleiro1);
+		}
 		
 	}
 
