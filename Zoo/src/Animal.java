@@ -11,7 +11,24 @@ public abstract class Animal {
     // ============ ACESSORES e MODIFICADORES ===============
     // =======================================================
 
+	public String getNome() {
+		return nome;
+	}
 
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+
+	public String getVoz() {
+		return voz;
+	}
+
+
+	public void setVoz(String voz) {
+		this.voz = voz;
+	}
 
     // =======================================================
     // =================== CONSTRUTORES =====================

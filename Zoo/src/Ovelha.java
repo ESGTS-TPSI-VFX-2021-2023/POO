@@ -9,7 +9,13 @@ public class Ovelha extends AnimalDomestico {
     // ============ ACESSORES e MODIFICADORES ===============
     // =======================================================
 
+	public double getPeso() {
+		return peso;
+	}
 
+	public void setPeso(double peso) {
+		this.peso = peso;
+	}
 
     // =======================================================
     // =================== CONSTRUTORES =====================
@@ -21,11 +27,18 @@ public class Ovelha extends AnimalDomestico {
 
    
 
-    // CONSTRUTOR COM PARÂMETROS
+    public Ovelha(String nome, String voz, double peso) {
+		super(nome, voz);
+		this.peso = peso;
+	}
+
+	// CONSTRUTOR COM PARÂMETROS
 	public Ovelha(String nome, String voz) {
 		super(nome, voz);
 		// TODO Auto-generated constructor stub
 	}
+
+	
 
 
     // =======================================================

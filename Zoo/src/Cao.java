@@ -9,7 +9,13 @@ public class Cao extends AnimalDomestico {
     // ============ ACESSORES e MODIFICADORES ===============
     // =======================================================
 
+	public String getRaca() {
+		return raca;
+	}
 
+	public void setRaca(String raca) {
+		this.raca = raca;
+	}
 
     // =======================================================
     // =================== CONSTRUTORES =====================
@@ -25,6 +31,11 @@ public class Cao extends AnimalDomestico {
 	public Cao(String nome, String voz) {
 		super(nome, voz);
 		// TODO Auto-generated constructor stub
+	}
+
+	public Cao(String nome, String voz, String raca) {
+		super(nome, voz);
+		this.raca = raca;
 	}
 
 
