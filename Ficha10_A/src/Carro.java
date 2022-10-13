@@ -7,6 +7,7 @@ public class Carro implements IVeiculo {
 	public void Avancar(int valor) throws Exception {
 		// TODO Auto-generated method stub
 		
+		
 		if (this.posicao + valor > 4) {
 			throw new Exception("Acidente Frontal");
 		}

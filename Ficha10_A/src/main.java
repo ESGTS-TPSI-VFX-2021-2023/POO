@@ -8,9 +8,16 @@ public class main {
 		
 		try {
 			c1.Avancar(5);
-		} catch (Exception e) {
+		}
+		catch (ArithmeticException ex) {
+			// TODO Auto-generated catch block
+			System.out.println(ex.getMessage());
+		}
+		catch (Exception e) {
 			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());
+		}finally {
+			System.out.println("Chegou ao final");
 		}
 		
 	}
